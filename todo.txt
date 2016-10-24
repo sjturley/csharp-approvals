@@ -1,7 +1,6 @@
 
-remove line
-RUN export RACK_ENV='production'
-from client/Dockerfile
+tests will actually create volumes by posting /start to runner
+these need to be removed
 
 repo needs to set env-vars ${DOCKER_USERNAME} ${DOCKER_PASSWORD}
 
@@ -11,5 +10,4 @@ need to create a cyberdojo/base_ruby image
   cyberdojo/commander can be built from runner
 
 docker/build-image.sh needs to get image name from client/starting/manifest.json
-
 

@@ -30,6 +30,7 @@ docker-compose up -d
 
 server_cid=`docker ps --all --quiet --filter "name=csharp-nunit-tester"`
 docker exec ${server_cid} sh -c "cd src && ruby ./traffic_lights_test.rb"
+#docker exec ${server_cid} sh -c "pwd && ls -al"
 server_exit_status=$?
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
