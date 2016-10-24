@@ -1,0 +1,14 @@
+#-----Ignore everything
+
+*
+
+#-----!Except these dirs
+
+!lights
+!src
+!starting
+
+#-----!Except these files
+
+!Gemfile
+!Procfile

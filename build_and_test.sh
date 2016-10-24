@@ -9,7 +9,13 @@ fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+my_dir="$( cd "$( dirname "${0}" )" && pwd )"
 app_dir=/app
+
+${my_dir}/client/build-image.sh ${app_dir}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 docker_version=$(docker --version | awk '{print $3}' | sed '$s/.$//')
 server_port=4557
 
@@ -17,16 +23,13 @@ cat ${my_dir}/docker-compose.yml.PORT |
   sed "s/DOCKER_ENGINE_VERSION/${docker_version}/g" |
   sed "s/SERVER_PORT/${server_port}/g" > ${my_dir}/docker-compose.yml
 
-echo "WORK IN PROGRESS: EXITING EARLY"
-exit
-
 docker-compose down
 docker-compose up -d
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-server_cid=`docker ps --all --quiet --filter "name=csharp-tester"`
-docker exec ${server_cid} sh -c "cd test && ./run.sh ${*}"
+server_cid=`docker ps --all --quiet --filter "name=csharp-nunit-tester"`
+docker exec ${server_cid} sh -c "cd src && ruby ./traffic_lights_test.rb"
 server_exit_status=$?
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -38,7 +41,7 @@ if [ ${server_exit_status} != 0 ]; then
   exit 1
 else
   echo
-  echo "All passed. Removing NAME? containers..."
+  echo "All passed. Removing containers..."
   docker-compose down 2>/dev/null
   exit 0
 fi
