@@ -1,0 +1,18 @@
+
+version: '2'
+
+services:
+  tester:
+    user: nobody
+    image: cyberdojo/csharp_nunit_tester
+    command: [ "foreman", "start", "-d", "/app" ]
+    container_name: csharp-tester
+
+  runner_server:
+    user: root
+    image: cyberdojo/runner:DOCKER_ENGINE_VERSION
+    command: [ "foreman", "start", "-d", "/app" ]
+    ports: [ "SERVER_PORT:SERVER_PORT" ]
+    volumes: [ '/var/run/docker.sock:/var/run/docker.sock' ]
+    container_name: runner_server
+
