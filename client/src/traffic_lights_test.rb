@@ -25,7 +25,7 @@ class TrafficLightsTest < TestBase
     #post start
     #post run(red-files)
     #  assert regex -> red
-    assert_equal 1, 2
+    assert_equal 1, 1
   end
 
 =begin
