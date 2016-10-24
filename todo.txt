@@ -1,6 +1,4 @@
 
-trigger travis build
-
 repo needs to set env-vars ${DOCKER_USERNAME} ${DOCKER_PASSWORD}
 
 docker/build-image.sh needs to get image name from client/starting/manifest.json

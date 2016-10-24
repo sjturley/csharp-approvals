@@ -15,6 +15,6 @@ script:
     - ./build_and_test.sh
 
 after_success:
-    - docker login --username ${DOCKER_USERNAME} --password ${DOCKER_PASSWORD}
-    - docker push cyberdojo/runner:${DOCKER_ENGINE_VERSION}
+    #- docker login --username ${DOCKER_USERNAME} --password ${DOCKER_PASSWORD}
+    #- docker push cyberdojo/runner:${DOCKER_ENGINE_VERSION}
 
