@@ -4,7 +4,7 @@ require 'sinatra/base'
 class Demo < Sinatra::Base
 
   get '/' do
-    output = `ruby -e "require '/app/src/traffic_lights_test.rb'"`
+    output = `/app/src/run_tests.sh`
     status = $?.exitstatus
     "<pre>" +
     "status:#{status}\n" +
