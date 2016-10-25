@@ -5,5 +5,6 @@ if [ ! -f /.dockerenv ]; then
   exit 1
 fi
 
-test_files=(/app/src/*_test.rb)
+my_dir="$( cd "$( dirname "${0}" )" && pwd )"
+test_files=(${my_dir}/*_test.rb)
 ruby -e "%w( ${test_files[*]} ).shuffle.each { |file| require file }"
