@@ -9,7 +9,10 @@ fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+cd language_tester
 docker-compose build
+cd ..
+
 docker_version=$(docker --version | awk '{print $3}' | sed '$s/.$//')
 export DOCKER_VERSION=${docker_version}
 docker-compose down
@@ -17,7 +20,7 @@ docker-compose up -d
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-cid=`docker ps --all --quiet --filter "name=language_tester"`
+cid=`docker ps --all --quiet --filter "name=runner_client"`
 docker exec ${cid} sh -c "/app/src/run_tests.sh"
 status=$?
 

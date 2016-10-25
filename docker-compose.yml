@@ -2,13 +2,11 @@
 version: '2'
 
 services:
-  language_tester:
-    build:
-      context: ./language_tester
+  runner_client:
     user: nobody
     image: cyberdojo/language_tester
     command: [ "foreman", "start", "-d", "/app" ]
-    container_name: language_tester
+    container_name: runner_client
     ports: [ "4568:4568" ]
     volumes:
       - ./start_point:/app/start_point:ro
