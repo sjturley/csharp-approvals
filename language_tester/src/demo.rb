@@ -13,5 +13,3 @@ class Demo < Sinatra::Base
   end
 
 end
-
-
