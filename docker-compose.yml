@@ -2,11 +2,11 @@
 version: '2'
 
 services:
-  csharp_nunit_tester:
+  language_tester:
     user: nobody
-    image: cyberdojo/csharp_nunit_tester
+    image: cyberdojo/language_tester
     command: [ "foreman", "start", "-d", "/app" ]
-    container_name: csharp-nunit-tester
+    container_name: language_tester
     ports: [ "4568:4568" ]
     volumes:
       - ./start_point:/app/start_point:ro
