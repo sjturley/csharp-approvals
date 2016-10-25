@@ -24,4 +24,4 @@ RUN apk --update add --virtual build-dependencies build-base \
 
 ARG app_dir
 COPY . ${app_dir}
-EXPOSE 4568
+EXPOSE 4558

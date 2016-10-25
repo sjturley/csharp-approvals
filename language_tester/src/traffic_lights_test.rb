@@ -23,6 +23,7 @@ class TrafficLightsTest < TestBase
 
   test 'DC3',
   'red-traffic-light' do
+    puts 'talking to http://runner_server:4557/'
     json = new_avatar(test_id, 'salmon')
     puts json
     #post run(red-files)
