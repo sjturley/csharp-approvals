@@ -7,7 +7,3 @@ services:
       context: .
     user: nobody
     image: cyberdojo/language_tester
-
-    #command: [ "foreman", "start", "-d", "/app" ]
-    #container_name: language_tester
-    #ports: [ "4568:4568" ]
