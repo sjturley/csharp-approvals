@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# build_and_test.sh script will...
-
-#  1. create a volume containing start/ files
-#     create a volume contains lights/ files
-#  2. start image_tester client-container from image and mount volume
-#    as part of docker-compose.yml
-#  3. shell into client container and run ruby script that is inside it to get image-name
-#  4. build language image being tested from docker/Dockerfile and use name from 3.
-#  5. shell into client container and run the tests.
-
 hash docker 2> /dev/null
 if [ $? != 0 ]; then
   echo
@@ -20,9 +10,10 @@ fi
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 my_dir="$( cd "$( dirname "${0}" )" && pwd )"
-app_dir=/app
+my_name="${my_dir##*/}"
 
 # This builds the tester image
+app_dir=/app
 ${my_dir}/client/build-image.sh ${app_dir}
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
