@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # build_and_test.sh script will...
-#  1. create a volume containing start/ files and lights/ files
+
+#  1. create a volume containing start/ files
+#     create a volume contains lights/ files
 #  2. start image_tester client-container from image and mount volume
 #    as part of docker-compose.yml
 #  3. shell into client container and run ruby script that is inside it to get image-name
@@ -20,6 +22,7 @@ fi
 my_dir="$( cd "$( dirname "${0}" )" && pwd )"
 app_dir=/app
 
+# This builds the tester image
 ${my_dir}/client/build-image.sh ${app_dir}
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -

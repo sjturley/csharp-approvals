@@ -9,7 +9,7 @@ class TrafficLightsTest < TestBase
   end
 
   def setup
-    dir = '/app/starting'
+    dir = '/app/start_point'
     manifest = JSON.parse(IO.read("#{dir}/manifest.json"))
     filenames = manifest['visible_filenames']
     @files = Hash[filenames.collect { |filename|

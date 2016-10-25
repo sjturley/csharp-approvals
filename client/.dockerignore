@@ -4,9 +4,9 @@
 
 #-----!Except these dirs
 
-!lights
+!traffic_lights
 !src
-!starting
+!start_point
 
 #-----!Except these files
 

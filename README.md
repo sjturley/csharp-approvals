@@ -2,19 +2,19 @@
 
 Plan:
 
-- client/docker:
+- docker/
   * builds cyberdojofoundation/csharp_nunit
 
-- client/src:
+- client/src/
   * build cyberdojofoundation/language_tester
 
-- client/starting:
+- client/starting/
   * manifest.json - names the image cyberdojofoundation/csharp_nunit
   * visible-files
   * put into a volume
   * mounted into container (image = language_tester)
 
-- client/lights:
+- client/lights/
   * manifest.json - names the visible-file to load and use as visible-file
   * put into a volume
   * mounted into container (image = language_tester)
