@@ -1,13 +1,8 @@
 
-tests will actually create volumes by posting /start to runner
-these need to be removed
-
 repo needs to set env-vars ${DOCKER_USERNAME} ${DOCKER_PASSWORD}
 
 need to create a cyberdojo/base_ruby image
   cyberdojo/csharp_nunit_tester can be built from this
   cyberdojo/runner can be built from this
   cyberdojo/commander can be built from runner
-
-docker/build-image.sh needs to get image name from client/starting/manifest.json
 

@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# build_and_test.sh script will...
+#  1. create a volume containing start/ files and lights/ files
+#  2. start image_tester client-container from image and mount volume
+#    as part of docker-compose.yml
+#  3. shell into client container and run ruby script that is inside it to get image-name
+#  4. build language image being tested from docker/Dockerfile and use name from 3.
+#  5. shell into client container and run the tests.
+
 hash docker 2> /dev/null
 if [ $? != 0 ]; then
   echo
@@ -32,7 +40,6 @@ docker-compose up -d
 
 client_cid=`docker ps --all --quiet --filter "name=csharp-nunit-tester"`
 docker exec ${client_cid} sh -c "/app/src/run_tests.sh"
-#docker exec ${server_cid} sh -c "pwd && ls -al"
 client_status=$?
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
