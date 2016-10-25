@@ -17,21 +17,23 @@ ${my_dir}/client/build-image.sh ${app_dir}
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 docker_version=$(docker --version | awk '{print $3}' | sed '$s/.$//')
-server_port=4557
+client_port=4568
+server_port=4567
 
 cat ${my_dir}/docker-compose.yml.PORT |
   sed "s/DOCKER_ENGINE_VERSION/${docker_version}/g" |
-  sed "s/SERVER_PORT/${server_port}/g" > ${my_dir}/docker-compose.yml
+  sed "s/SERVER_PORT/${server_port}/g" |
+  sed "s/CLIENT_PORT/${client_port}/g" > ${my_dir}/docker-compose.yml
 
 docker-compose down
 docker-compose up -d
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-server_cid=`docker ps --all --quiet --filter "name=csharp-nunit-tester"`
-docker exec ${server_cid} sh -c "cd src && ruby ./traffic_lights_test.rb"
+client_cid=`docker ps --all --quiet --filter "name=csharp-nunit-tester"`
+#docker exec ${client_cid} sh -c "cd src && ruby ./traffic_lights_test.rb"
 #docker exec ${server_cid} sh -c "pwd && ls -al"
-server_exit_status=$?
+client_exit_status=$?
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 

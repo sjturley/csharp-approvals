@@ -7,12 +7,13 @@ services:
     image: cyberdojo/csharp_nunit_tester
     command: [ "foreman", "start", "-d", "/app" ]
     container_name: csharp-nunit-tester
+    ports: [ "4568:4568" ]
 
   runner_server:
     user: root
     image: cyberdojo/runner:1.12.2
     command: [ "foreman", "start", "-d", "/app" ]
-    ports: [ "4557:4557" ]
     volumes: [ '/var/run/docker.sock:/var/run/docker.sock' ]
     container_name: runner_server
+    ports: [ "4567:4567" ]
 
