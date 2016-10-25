@@ -3,6 +3,8 @@ version: '2'
 
 services:
   language_tester:
+    build:
+      context: ./language_tester
     user: nobody
     image: cyberdojo/language_tester
     command: [ "foreman", "start", "-d", "/app" ]
@@ -14,7 +16,7 @@ services:
 
   runner_server:
     user: root
-    image: cyberdojo/runner:1.12.2
+    image: cyberdojo/runner:${DOCKER_VERSION}
     command: [ "foreman", "start", "-d", "/app" ]
     volumes: [ '/var/run/docker.sock:/var/run/docker.sock' ]
     container_name: runner_server

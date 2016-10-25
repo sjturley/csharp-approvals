@@ -1,7 +1,7 @@
 FROM alpine:3.4
 MAINTAINER Jon Jagger <jon@jaggersoft.com>
 
-ARG app_dir
+ARG app_dir=/app
 
 WORKDIR ${app_dir}/
 

@@ -9,16 +9,9 @@ fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-my_dir="$( cd "$( dirname "${0}" )" && pwd )"
-my_name="${my_dir##*/}"
-
-app_dir=/app
-${my_dir}/language_tester/build-image.sh ${app_dir}
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+docker-compose build
 docker_version=$(docker --version | awk '{print $3}' | sed '$s/.$//')
-
+export DOCKER_VERSION=${docker_version}
 docker-compose down
 docker-compose up -d
 
