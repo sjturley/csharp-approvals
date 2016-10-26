@@ -6,7 +6,7 @@ Plan:
   * builds cyberdojofoundation/csharp_nunit
 
 - language_tester/
-  * build cyberdojofoundation/language_tester
+  * builds cyberdojofoundation/language_tester
 
 - start_point/
   * manifest.json - names the image cyberdojofoundation/csharp_nunit

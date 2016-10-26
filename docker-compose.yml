@@ -5,7 +5,6 @@ services:
   runner_client:
     user: nobody
     image: cyberdojo/language_tester
-    command: [ "foreman", "start", "-d", "/app" ]
     container_name: runner_client
     ports: [ "4558:4558" ]
     volumes:
@@ -15,8 +14,6 @@ services:
   runner_server:
     user: root
     image: cyberdojo/runner:${DOCKER_VERSION}
-    command: [ "foreman", "start", "-d", "/app" ]
     volumes: [ '/var/run/docker.sock:/var/run/docker.sock' ]
     container_name: runner_server
     ports: [ "4557:4557" ]
-

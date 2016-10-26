@@ -25,3 +25,4 @@ RUN apk --update add --virtual build-dependencies build-base \
 ARG app_dir
 COPY . ${app_dir}
 EXPOSE 4558
+CMD [ "foreman", "start", "-d", "/app" ]
