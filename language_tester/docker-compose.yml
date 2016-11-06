@@ -5,5 +5,7 @@ services:
   language_tester:
     build:
       context: .
+      args:
+        PORT: 4558
     user: nobody
     image: cyberdojo/language_tester
