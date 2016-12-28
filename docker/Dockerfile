@@ -4,7 +4,6 @@ MAINTAINER Jon Jagger <jon@jaggersoft.com>
 COPY packages.config .
 
 RUN  apk add --update openssl \
-  && mozroots --import --sync \
   && wget http://nuget.org/nuget.exe \
   && mono --runtime=v4.0 nuget.exe restore -PackagesDirectory . \
   && mkdir /nunit \
