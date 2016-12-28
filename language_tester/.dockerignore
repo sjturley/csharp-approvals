@@ -5,9 +5,3 @@
 #-----!Except these dirs
 
 !src
-
-#-----!Except these files
-
-!Gemfile
-!config.ru
-!Procfile

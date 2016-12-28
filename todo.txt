@@ -1,5 +1,11 @@
 
+See README.md
+
 repo needs to set env-vars ${DOCKER_USERNAME} ${DOCKER_PASSWORD}
+
+language_tester image is still based on foreman - change to sinatra
+
+I think language_tester needs to become its own repo creating its own image
 
 need to create a cyberdojo/base_ruby image
   cyberdojo/csharp_nunit_tester can be built from this

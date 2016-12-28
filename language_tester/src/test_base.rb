@@ -1,7 +1,5 @@
-
 require 'minitest/autorun'
-
-require_relative './hex_id_helper'
+require_relative 'hex_id_helper'
 
 class TestBase < MiniTest::Test
 
