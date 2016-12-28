@@ -1,0 +1,19 @@
+# ignore everything
+/*
+/*/
+
+# except these dirs...
+
+!/docker
+!/start_point
+!/traffic_lights
+!/outputs
+
+# and these files...
+
+!/.gitignore
+!/.dockerignore
+!/.travis.yml
+!/pipe.sh
+!/README.md
+!/LICENSE.md

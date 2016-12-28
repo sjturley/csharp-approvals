@@ -1,9 +1,0 @@
-
-version: '2'
-
-services:
-  language_tester:
-    build:
-      context: .
-    user: nobody
-    image: cyberdojo/language_tester
