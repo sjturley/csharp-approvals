@@ -5,7 +5,7 @@ language: generic
 script:
     - curl -O https://raw.githubusercontent.com/cyber-dojo/ruby/master/push.sh
     - chmod +x push.sh
-    #- docker pull cyberdojo/commander
+    - docker pull cyberdojo/commander
     - docker pull cyberdojo/language_tester
     - ./pipe.sh
     #- ./push.sh
