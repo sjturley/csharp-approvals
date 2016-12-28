@@ -1,14 +1,12 @@
 
 See README.md
 
-repo needs to set env-vars ${DOCKER_USERNAME} ${DOCKER_PASSWORD}
+needs an output dir that contains red/amber/green sample outputs
+that are used to test the red_amber_green lambda regex inside manifest.json
 
-language_tester image is still based on foreman - change to sinatra
+repo needs to set env-vars ${DOCKER_USERNAME} ${DOCKER_PASSWORD}
 
 I think language_tester needs to become its own repo creating its own image
 
-need to create a cyberdojo/base_ruby image
-  cyberdojo/csharp_nunit_tester can be built from this
-  cyberdojo/runner can be built from this
-  cyberdojo/commander can be built from runner
-
+language_tester should have docker installed inside itself.
+It can then build docker-image for the language as part of its script.

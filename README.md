@@ -11,10 +11,8 @@ Plan:
 - start_point/
   * manifest.json - names the image cyberdojofoundation/csharp_nunit
   * visible-files
-  * put into a volume
-  * mounted into container (image = language_tester)
+  * mounted into language_tester container
 
 - traffic_lights/
   * manifest.json - names the visible-file to load and use as visible-file
-  * put into a volume
-  * mounted into container (image = language_tester)
+  * mounted into language_tester container
