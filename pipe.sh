@@ -3,7 +3,6 @@ set -e
 
 my_dir="$( cd "$( dirname "${0}" )" && pwd )"
 
-
 # 1.
 # test start-point first
 # get image_name from manifest.json

@@ -4,9 +4,7 @@ See README.md
 needs an output dir that contains red/amber/green sample outputs
 that are used to test the red_amber_green lambda regex inside manifest.json
 
-repo needs to set env-vars ${DOCKER_USERNAME} ${DOCKER_PASSWORD}
-
-I think language_tester needs to become its own repo creating its own image
-
-language_tester should have docker installed inside itself.
-It can then build docker-image for the language as part of its script.
+Don't want the main pipe.sh script inside every language repo.
+How to share it?
+Put it inside ruby?
+Time to create wiki/shared repos?
