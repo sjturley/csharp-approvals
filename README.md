@@ -1,15 +1,9 @@
+
+<img src="https://raw.githubusercontent.com/cyber-dojo/nginx/master/images/home_page_logo.png" alt="cyber-dojo yin/yang logo" width="50px" height="50px"/>
+
 # cyberdojofoundation/csharp_nunit
 
-Plan:
+Work in progress...
 
-- docker/
-  * builds cyberdojofoundation/csharp_nunit
-
-- start_point/
-  * manifest.json - names the image cyberdojofoundation/csharp_nunit
-  * visible-files
-  * mounted into language_tester container
-
-- traffic_lights/
-  * manifest.json - names the visible-file to load and use as visible-file
-  * mounted into language_tester container
+Will be the first language+test_framework repo that has its
+docker image created by [cyberdojo/language_tester](https://github.com/cyber-dojo/language_tester)
