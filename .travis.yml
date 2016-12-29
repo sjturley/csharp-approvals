@@ -1,13 +1,13 @@
 sudo: required
 services: docker
-language: generic
+language: node_js
 
 script:
     - curl -O https://raw.githubusercontent.com/cyber-dojo/ruby/master/push.sh
     - chmod +x push.sh
     - docker pull cyberdojo/commander
     - docker pull cyberdojo/language_tester
-    - ./pipe.sh
+    - ./test_language.sh
     #- ./push.sh
     #- trigger dependent repos
 
