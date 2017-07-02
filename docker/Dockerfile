@@ -9,3 +9,5 @@ RUN  apk add --update openssl \
   && mkdir /nunit \
   && mv NUnit.2.6.2         /nunit \
   && mv NUnit.Runners.2.6.1 /nunit
+
+COPY red_amber_green.rb /usr/local/bin
