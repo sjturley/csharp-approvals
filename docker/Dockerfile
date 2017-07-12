@@ -1,5 +1,5 @@
-FROM cyberdojofoundation/csharp:4.6.1
-MAINTAINER Jon Jagger <jon@jaggersoft.com>
+FROM  cyberdojofoundation/csharp:4.6.1
+LABEL maintainer=jon@jaggersoft.com
 
 COPY packages.config .
 
