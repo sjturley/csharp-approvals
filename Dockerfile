@@ -1,4 +1,4 @@
-FROM  cyberdojofoundation/csharp
+FROM cyberdojofoundation/csharp
 LABEL maintainer=jon@jaggersoft.com
 
 COPY packages.config .
