@@ -5,8 +5,7 @@
   "visible_filenames": [
     "HikerTest.cs",
     "Hiker.cs",
-    "cyber-dojo.sh",
-    "inc/wibble.txt"
+    "cyber-dojo.sh"
   ],
 
   "hidden_filenames": [ "TestResult\\.xml" ],
