@@ -1,7 +1,7 @@
 public class Hiker
 {
-    public static int Answer
+    public static int Answer()
     {
-        get { return 6 * 9; }
+        return 6 * 9;
     }
 }
