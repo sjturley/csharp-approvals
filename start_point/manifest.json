@@ -1,16 +1,14 @@
 
 {
+  "image_name": "cyberdojofoundation/csharp_nunit",
   "display_name": "C#, NUnit",
-
   "visible_filenames": [
     "HikerTest.cs",
     "Hiker.cs",
     "cyber-dojo.sh"
   ],
-
-  "hidden_filenames": [ "TestResult\\.xml" ],
-
-  "image_name": "cyberdojofoundation/csharp_nunit",
-
-  "filename_extension": ".cs"
+  "filename_extension": [ ".cs" ],
+  "max_seconds": 10,
+  "tab_size": 4,
+  "hidden_filenames": [ "TestResult\\.xml" ]
 }
