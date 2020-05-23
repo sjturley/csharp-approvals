@@ -1,4 +1,3 @@
-
 {
   "image_name": "cyberdojofoundation/csharp_nunit",
   "display_name": "C#, NUnit",
@@ -9,6 +8,5 @@
   ],
   "filename_extension": [ ".cs" ],
   "max_seconds": 10,
-  "tab_size": 4,
-  "hidden_filenames": [ "TestResult\\.xml" ]
+  "tab_size": 4
 }
