@@ -30,5 +30,7 @@ mv NUnit.*/lib                  /nunit && \
 mv NUnit.ConsoleRunner.*/tools  /nunit && \
 mkdir /approvals && \
 mv ApprovalTests.*/lib /approvals
+mkdir /approvalutils && \
+mv ApprovalUtilities.*/lib /approvals
 
 COPY red_amber_green.rb /usr/local/bin
