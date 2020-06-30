@@ -1,5 +1,0 @@
-FROM cyberdojofoundation/csharp:379ef62
-LABEL maintainer=jon@jaggersoft.com
-
-COPY . .
-RUN ./install.sh && rm ./install.sh
