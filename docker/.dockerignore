@@ -1,4 +1,3 @@
 *
-!install.sh
-!packages.config
+!common-packages.csproj
 !red_amber_green.rb
