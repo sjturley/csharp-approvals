@@ -28,6 +28,8 @@ mono --runtime=v4.5 nuget.exe restore -PackagesDirectory . && \
 mkdir /nunit && \
 mv NUnit.*/lib                  /nunit && \
 mv NUnit.ConsoleRunner.*/tools  /nunit && \
+mkdir /emptyFiles && \
+mv EmptyFiles.*/lib /emptyfiles && \
 mkdir /approvals && \
 mv ApprovalTests.*/lib /approvals && \
 mkdir /approvalutils && \
